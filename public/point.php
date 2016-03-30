@@ -26,7 +26,7 @@ $app->post('/redeem', function(Request $request) use($app)
     );
 
     $users_id = $request->get('users_id');
-    $point = $request->get('point');
+    $reward_id = $request->get('reward_id');
 
     if(!$conn->connect_error) {
 
@@ -34,27 +34,15 @@ $app->post('/redeem', function(Request $request) use($app)
 
         $result = $conn->query($query) or die(mysqli_error($conn));
 
-        if($result->num_rows > 0)
+        $query_insert = "INSERT INTO redeem
+(users_id, reward_id)
+values ($users_id, $reward_id)";
+
+        $result = $conn->query($query_insert) or die(mysqli_error($conn));
+
+        if($result)
         {
-            $row = $result->fetch_assoc();
-
-            if($point <= $row['point']){
-
-                $query_insert = "INSERT INTO redeem
-(users_id, point)
-values ($users_id, $point)";
-
-                $result = $conn->query($query_insert) or die(mysqli_error($conn));
-
-                if($result)
-                {
-                    $data['status'] = 'ok';
-                }
-            }else{
-                $data = ['status' => 'error', 'message' => 'not enough point'];
-            }
-        }else{
-            $data = ['status' => 'error', 'message' => 'username not found'];
+            $data['status'] = 'ok';
         }
     }
 
@@ -73,12 +61,11 @@ $app->post('/process', function(Request $request) use($app)
 
     $redeem_id = $request->get('redeem_id');
     $admin_id = $request->get('admin_id');
-    $note = $request->get('note');
     $date_approved = date('Y-m-d h:i:s');
 
     if(!$conn->connect_error) {
 
-        $query_update = "UPDATE redeem r SET r.status = 1, r.admin_id = $admin_id, r.note = '$note',
+        $query_update = "UPDATE redeem r SET r.status = 1, r.admin_id = $admin_id,
 r.date_approved = '$date_approved' WHERE r.redeem_id = $redeem_id";
 
         $result = $conn->query($query_update) or die(mysqli_error($conn));
@@ -107,7 +94,6 @@ $app->post('/reject', function(Request $request) use($app)
 
     $redeem_id = $request->get('redeem_id');
     $admin_id = $request->get('admin_id');
-    $note = $request->get('note');
     $date_approved = date('Y-m-d h:i:s');
 
     if(!$conn->connect_error) {
