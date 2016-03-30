@@ -92,7 +92,7 @@ $app->get('/getWhere', function(Request $request) use($app)
         if($result->num_rows > 0) {
             $data['status'] = 'success';
             $row = $result->fetch_assoc();
-            $data['data'] = $row['coverage_name'];
+            $data['data'] = $row['name'];
         } else {
             $data['status'] = 'error - not found';
         }
