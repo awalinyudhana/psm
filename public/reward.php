@@ -69,8 +69,7 @@ $app->get('/getV2', function(Request $request) use($app)
 
         $result = $conn->query($query2) or die(mysqli_error($conn));
 
-        if($result->num_rows > 0)
-        {
+        if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
             $total = $row['total'];
           }
