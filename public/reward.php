@@ -62,7 +62,7 @@ $app->get('/getV2', function(Request $request) use($app)
         $offset = ($page - 1) * $limit;
         $total = 0;
 
-        $query = "SELECT * FROM reward ORDER BY point";
+        $query = "SELECT * FROM reward ORDER BY point ";
         $querylimit = "LIMIT $offset,$limit";
 
         $query2 = "SELECT COUNT(*) as total FROM (".$query.") as a";
