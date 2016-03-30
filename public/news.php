@@ -62,7 +62,7 @@ $app->get('/getV2', function(Request $request) use($app)
         $offset = ($page - 1) * $limit;
         $total = 0;
 
-        $query = "SELECT * FROM news WHERE status = 1 ORDER BY date_published DESC";
+        $query = "SELECT * FROM news WHERE status = 1 ORDER BY date_published DESC ";
         $querylimit = "LIMIT $offset,$limit";
 
         $query2 = "SELECT COUNT(*) as total FROM (".$query.") as a";
