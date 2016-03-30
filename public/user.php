@@ -320,6 +320,32 @@ $app->get('/disable', function(Request $request) use($app)
   ));
 });
 
+$app->get('/alert', function(Request $request) use($app)
+{
+  $conn = konekDb();
+  $data = array(
+      'status'  => 'error - db failed'
+  );
+
+  $id = $request->get('users_id');
+
+  if(!$conn->connect_error) {
+    $query = "UPDATE users SET alert_status = 1 WHERE users_id = '$id'";
+
+    $result = $conn->query($query) or die(mysqli_error($conn));
+    //$result = $conn->query($query);
+
+    if($result)
+    {
+      $data['status'] = 'ok';
+    }
+  }
+
+  $dataJson = json_encode($data);
+  return new Response($dataJson, 200, array(
+      'Content-Type' => 'application/json'
+  ));
+});
 
 $app->get('/reject', function(Request $request) use($app)
 {
