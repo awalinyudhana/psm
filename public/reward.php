@@ -65,7 +65,7 @@ $app->get('/getV2', function(Request $request) use($app)
         $query = "SELECT * FROM reward ORDER BY point";
         $querylimit = "LIMIT $offset,$limit";
 
-        $query2 = "SELECT COUNT(*) as total FROM (".$query.$querywhere.") as a";
+        $query2 = "SELECT COUNT(*) as total FROM (".$query.") as a";
 
         $result = $conn->query($query2) or die(mysqli_error($conn));
 
