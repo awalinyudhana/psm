@@ -3,7 +3,7 @@
 function konekDb() {
     $servername = 'localhost';
     $username = 'root';
-    $password = '';
+    $password = 'ParaStageMite!^';
     $dbname = 'psm';
 
     // Create connection
