@@ -40,7 +40,7 @@ $app->post('/payment', function(Request $request) use($app)
 
             if($commission <= $row['commission']){
 
-                $query_insert = "INSERT INTO redeem
+                $query_insert = "INSERT INTO payment
 (users_id, commission)
 values ($agent_id, $commission)";
 
