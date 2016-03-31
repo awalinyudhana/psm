@@ -98,7 +98,7 @@ $app->post('/reject', function(Request $request) use($app)
 
     if(!$conn->connect_error) {
 
-        $query_update = "UPDATE redeem r SET r.status = 2, r.admin_id = $admin_id, r.note = '$note', r.date_approved = '$date_approved'
+        $query_update = "UPDATE redeem r SET r.status = 2, r.admin_id = $admin_id, r.date_approved = '$date_approved'
 WHERE r.redeem_id = $redeem_id";
 
         $result = $conn->query($query_update) or die(mysqli_error($conn));
