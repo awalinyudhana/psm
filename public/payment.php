@@ -41,7 +41,7 @@ $app->post('/payment', function(Request $request) use($app)
             if($commission <= $row['commission']){
 
                 $query_insert = "INSERT INTO payment
-(users_id, commission)
+(agent_id, commission)
 values ($agent_id, $commission)";
 
                 $result = $conn->query($query_insert) or die(mysqli_error($conn));
