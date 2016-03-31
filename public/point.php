@@ -164,7 +164,7 @@ FROM redeem r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c ON c.coverage_id = u.coverage_id
 JOIN reward w ON w.reward_id = r.reward_id
-WHERE r.status = 0";
+WHERE r.status = 1";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
