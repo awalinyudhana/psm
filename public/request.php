@@ -91,12 +91,13 @@ $app->get('/get', function(Request $request) use($app)
         'status'  => 'error - db failed',
         'data' => array()
     );
+    $agent_id = $request->get('agent_id');
 
     if(!$conn->connect_error) {
         $query = "SELECT r.*, u.name as agent_name, c.name as coverage_name FROM request r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c on c.coverage_id = u.coverage_id
- WHERE r.status = 0";
+ WHERE r.status = 0 AND c.coverage = $agent_id";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
