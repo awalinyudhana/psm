@@ -29,7 +29,7 @@ $app->post('/request', function(Request $request) use($app)
     $users_id = $request->get('users_id');
 
     if(!$conn->connect_error) {
-        $query = "INSERT INTO reward
+        $query = "INSERT INTO request
 (users_id)
 values ($users_id)";
 
