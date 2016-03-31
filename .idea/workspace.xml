@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83753362-6632-4a80-b9e8-e01922bc12f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/collection.php" afterPath="$PROJECT_DIR$/public/collection.php" />
-    </list>
+    <list default="true" id="83753362-6632-4a80-b9e8-e01922bc12f8" name="Default" comment="" />
     <ignored path="psm.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collection.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0066225166">
+            <state vertical-scroll-proportion="-54.375">
               <caret line="88" column="18" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="18" />
               <folding>
                 <marker date="1459392191000" expanded="true" signature="908:1012" placeholder="INSERT INTO collection... " />
@@ -72,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="payment.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.625">
+            <state vertical-scroll-proportion="4.602649">
               <caret line="140" column="64" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="64" />
               <folding>
                 <marker date="1459388768000" expanded="true" signature="830:871" placeholder="SELECT * FRO... agent" />
@@ -191,8 +188,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git commit -am &quot;request&quot;" />
-      <command text="git push" />
       <command text="git commit -am &quot;alert&quot;" />
       <command text="git push" />
       <command text="git commit -am &quot;redeem&quot;" />
@@ -213,6 +208,8 @@
       <command text="git commit -am &quot;redeem&quot;" />
       <command text="git push" />
       <command text="git commit -am &quot;rcollection&quot;" />
+      <command text="git push" />
+      <command text="git commit -am &quot;collection&quot;" />
       <command text="git push" />
       <command text="git commit -am &quot;collection&quot;" />
       <command text="git push" />
@@ -243,6 +240,9 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -668,6 +668,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="83753362-6632-4a80-b9e8-e01922bc12f8" name="Default" comment="" />
@@ -701,6 +704,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -961,25 +972,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.625">
-          <caret line="140" column="64" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="64" />
-          <folding>
-            <marker date="1459388768000" expanded="true" signature="830:871" placeholder="SELECT * FRO... agent" />
-            <marker date="1459388768000" expanded="true" signature="1126:1194" placeholder="INSERT INTO redeem... " />
-            <marker date="1459388768000" expanded="true" signature="2103:2218" placeholder="UPDATE payme... " />
-            <marker date="1459388768000" expanded="true" signature="2920:3035" placeholder="UPDATE payme... " />
-            <marker date="1459388768000" expanded="true" signature="3622:3837" placeholder="SELECT p*. a... " />
-            <marker date="1459388768000" expanded="true" signature="4518:4734" placeholder="SELECT p*. a... " />
-            <marker date="1459388768000" expanded="true" signature="4518:4735" placeholder="SELECT p.*, payment" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0066225166">
+        <state vertical-scroll-proportion="-54.375">
           <caret line="88" column="18" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="18" />
           <folding>
             <marker date="1459392191000" expanded="true" signature="908:1012" placeholder="INSERT INTO collection... " />
@@ -990,6 +985,22 @@
             <marker date="1459392191000" expanded="true" signature="3428:3738" placeholder="SELECT c.*, collection" />
             <marker date="1459392191000" expanded="true" signature="3428:3739" placeholder="SELECT c.*, collection" />
             <marker date="1459392191000" expanded="true" signature="3428:3764" placeholder="SELECT c.*, collection" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.602649">
+          <caret line="140" column="64" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="64" />
+          <folding>
+            <marker date="1459388768000" expanded="true" signature="830:871" placeholder="SELECT * FRO... agent" />
+            <marker date="1459388768000" expanded="true" signature="1126:1194" placeholder="INSERT INTO redeem... " />
+            <marker date="1459388768000" expanded="true" signature="2103:2218" placeholder="UPDATE payme... " />
+            <marker date="1459388768000" expanded="true" signature="2920:3035" placeholder="UPDATE payme... " />
+            <marker date="1459388768000" expanded="true" signature="3622:3837" placeholder="SELECT p*. a... " />
+            <marker date="1459388768000" expanded="true" signature="4518:4734" placeholder="SELECT p*. a... " />
+            <marker date="1459388768000" expanded="true" signature="4518:4735" placeholder="SELECT p.*, payment" />
           </folding>
         </state>
       </provider>
