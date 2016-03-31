@@ -86,6 +86,37 @@ ORDER BY c.date";
     ));
 });
 
+$app->get('/grafik', function(Request $request) use($app)
+{
+    $conn = konekDb();
+    $data = array(
+        'status'  => 'error - db failed',
+        'data' => array()
+    );
+
+    if(!$conn->connect_error) {
+        $query = "SELECT c.* , w.name as waste_name, SUM(c.qty) as total
+FROM collection c
+JOIN waste w ON w.waste_id = c.waste_id
+GROUP BY c.waste_id";
+
+        $result = $conn->query($query);
+        if($result->num_rows > 0) {
+            $data['status'] = 'success';
+            while($row = $result->fetch_assoc()) {
+                $data['data'][] = $row;
+            }
+        } else {
+            $data['status'] = 'error - not found';
+        }
+    }
+
+    $dataJson = json_encode($data);
+    return new Response($dataJson, 200, array(
+        'Content-Type' => 'application/json'
+    ));
+});
+
 $app->get('/users', function(Request $request) use($app)
 {
     $conn = konekDb();
