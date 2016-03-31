@@ -61,11 +61,13 @@ $app->get('/get', function(Request $request) use($app)
     );
 
     if(!$conn->connect_error) {
-        $query = "SELECT c.*, u.name as users_name, a.name as agent_name, c.name as coverage_name
+        $query = "SELECT c.*, u.name as users_name, a.name as agent_name, w.name as waste_name, c.name as coverage_name
 FROM collection c
 JOIN users u ON u.users_id = c.users_id
 JOIN coverage c ON c.coverage_id = u.coverage_id
-JOIN agent a ON a.agent_id = c.agent_id";
+JOIN waste w ON w.waste_id = c.waste_id
+JOIN agent a ON a.agent_id = c.agent_id
+ORDER BY c.date";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
@@ -95,11 +97,12 @@ $app->get('/users', function(Request $request) use($app)
     $users_id = $request->get('users_id');
 
     if(!$conn->connect_error) {
-        $query = "SELECT c.*, u.name as users_name, a.name as agent_name, c.name as coverage_name
+        $query = "SELECT c.*, u.name as users_name, a.name as agent_name, w.name as waste_name, c.name as coverage_name
 FROM collection c
 JOIN users u ON u.users_id = c.users_id
 JOIN coverage c ON c.coverage_id = u.coverage_id
 JOIN agent a ON a.agent_id = c.agent_id
+JOIN waste w ON w.waste_id = c.waste_id
 WHERE c.users_id = $users_id
 ORDER BY c.date";
 
