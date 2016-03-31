@@ -94,7 +94,7 @@ $app->get('/get', function(Request $request) use($app)
     $agent_id = $request->get('agent_id');
 
     if(!$conn->connect_error) {
-        $query = "SELECT r.*,  u.*m u.name as users_name, c.name as coverage_name FROM request r
+        $query = "SELECT r.*,  u.*, u.name as users_name, c.name as coverage_name FROM request r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c on c.coverage_id = u.coverage_id
  WHERE r.status = 0 AND c.coverage = $agent_id";
