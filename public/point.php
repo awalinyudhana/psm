@@ -126,7 +126,7 @@ $app->get('/pending', function(Request $request) use($app)
     );
 
     if(!$conn->connect_error) {
-        $query = "SELECT r.*, u.name as users_name, w.name as reward_name, w.point as reward_point, c.name as coverage_name
+        $query = "SELECT r.*, u.name as users_name, u.point as users_point, w.name as reward_name, w.point as reward_point, c.name as coverage_name
 FROM redeem r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c ON c.coverage_id = u.coverage_id
