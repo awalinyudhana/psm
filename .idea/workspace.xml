@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83753362-6632-4a80-b9e8-e01922bc12f8" name="Default" comment="" />
+    <list default="true" id="83753362-6632-4a80-b9e8-e01922bc12f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="psm.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -90,8 +92,8 @@
       <file leaf-file-name="reward.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/reward.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.125">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.875">
+              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
               <folding>
                 <marker date="1459385610000" expanded="true" signature="760:774" placeholder="SELECT * FRO... waste" />
                 <marker date="1459385610000" expanded="true" signature="760:795" placeholder="SELECT * FRO... reward" />
@@ -149,14 +151,14 @@
       <file leaf-file-name="request.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.88520974">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18984547">
+              <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
               <folding>
-                <marker date="1459399611000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
-                <marker date="1459399611000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
-                <marker date="1459399611000" expanded="true" signature="2309:2490" placeholder="SELECT r.*, request" />
-                <marker date="1459399611000" expanded="true" signature="2309:2507" placeholder="SELECT r.*, request" />
-                <marker date="1459399611000" expanded="true" signature="2309:2508" placeholder="SELECT r.*, request" />
+                <marker date="1459399915000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
+                <marker date="1459399915000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
+                <marker date="1459399915000" expanded="true" signature="2309:2496" placeholder="SELECT r.*, request" />
+                <marker date="1459399915000" expanded="true" signature="2309:2513" placeholder="SELECT r.*, request" />
+                <marker date="1459399915000" expanded="true" signature="2309:2514" placeholder="SELECT r.*, request" />
               </folding>
             </state>
           </provider>
@@ -197,11 +199,11 @@
       <command text="git push" />
       <command text="git commit -am &quot;redeem&quot;" />
       <command text="git push" />
-      <command text="git commit -am &quot;redeem&quot;" />
-      <command text="git push" />
-      <command text="git commit -am &quot;redeem&quot;" />
-      <command text="git push" />
       <command text="git commit -am &quot;rcollection&quot;" />
+      <command text="git push" />
+      <command text="git commit -am &quot;collection&quot;" />
+      <command text="git push" />
+      <command text="git commit -am &quot;collection&quot;" />
       <command text="git push" />
       <command text="git commit -am &quot;collection&quot;" />
       <command text="git push" />
@@ -838,11 +840,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1459399611000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
-            <marker date="1459399611000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
-            <marker date="1459399611000" expanded="true" signature="2309:2490" placeholder="SELECT r.*, request" />
-            <marker date="1459399611000" expanded="true" signature="2309:2507" placeholder="SELECT r.*, request" />
-            <marker date="1459399611000" expanded="true" signature="2309:2508" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
+            <marker date="1459399915000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
+            <marker date="1459399915000" expanded="true" signature="2309:2496" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="2309:2513" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="2309:2514" placeholder="SELECT r.*, request" />
           </folding>
         </state>
       </provider>
@@ -933,21 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/reward.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.125">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <marker date="1459385610000" expanded="true" signature="760:774" placeholder="SELECT * FRO... waste" />
-            <marker date="1459385610000" expanded="true" signature="760:795" placeholder="SELECT * FRO... reward" />
-            <marker date="1459385610000" expanded="true" signature="1747:1782" placeholder="SELECT * FRO... reward" />
-            <marker date="1459385610000" expanded="true" signature="1852:1899" placeholder="SELECT COUNT... ${$query}" />
-            <marker date="1459385610000" expanded="true" signature="3171:3245" placeholder="INSERT INTO waste... " />
-            <marker date="1459385610000" expanded="true" signature="3955:4040" placeholder="UPDATE waste... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/point.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.5">
@@ -997,16 +984,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/reward.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.875">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding>
+            <marker date="1459385610000" expanded="true" signature="760:774" placeholder="SELECT * FRO... waste" />
+            <marker date="1459385610000" expanded="true" signature="760:795" placeholder="SELECT * FRO... reward" />
+            <marker date="1459385610000" expanded="true" signature="1747:1782" placeholder="SELECT * FRO... reward" />
+            <marker date="1459385610000" expanded="true" signature="1852:1899" placeholder="SELECT COUNT... ${$query}" />
+            <marker date="1459385610000" expanded="true" signature="3171:3245" placeholder="INSERT INTO waste... " />
+            <marker date="1459385610000" expanded="true" signature="3955:4040" placeholder="UPDATE waste... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88520974">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.18984547">
+          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
           <folding>
-            <marker date="1459399611000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
-            <marker date="1459399611000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
-            <marker date="1459399611000" expanded="true" signature="2309:2490" placeholder="SELECT r.*, request" />
-            <marker date="1459399611000" expanded="true" signature="2309:2507" placeholder="SELECT r.*, request" />
-            <marker date="1459399611000" expanded="true" signature="2309:2508" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="783:832" placeholder="INSERT INTO reward... " />
+            <marker date="1459399915000" expanded="true" signature="1552:1660" placeholder="UPDATE reque... " />
+            <marker date="1459399915000" expanded="true" signature="2309:2496" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="2309:2513" placeholder="SELECT r.*, request" />
+            <marker date="1459399915000" expanded="true" signature="2309:2514" placeholder="SELECT r.*, request" />
           </folding>
         </state>
       </provider>

@@ -97,7 +97,7 @@ $app->get('/get', function(Request $request) use($app)
         $query = "SELECT r.*,  u.*, u.name as users_name, c.name as coverage_name FROM request r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c on c.coverage_id = u.coverage_id
- WHERE r.status = 0 AND c.coverage = $agent_id";
+ WHERE r.status = 0";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
