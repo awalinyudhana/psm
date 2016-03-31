@@ -73,12 +73,11 @@ $app->post('/process', function(Request $request) use($app)
 
     $payment_id = $request->get('payment_id');
     $admin_id = $request->get('admin_id');
-    $note = $request->get('note');
     $date_approved = date('Y-m-d h:i:s');
 
     if(!$conn->connect_error) {
 
-        $query_update = "UPDATE payment p SET p.status = 1, p.admin_id = $admin_id, p.note = '$note',
+        $query_update = "UPDATE payment p SET p.status = 1, p.admin_id = $admin_id,
 p.date_approved = '$date_approved' WHERE p.payment_id = $payment_id";
 
         $result = $conn->query($query_update) or die(mysqli_error($conn));
@@ -107,12 +106,11 @@ $app->post('/reject', function(Request $request) use($app)
 
     $payment_id = $request->get('payment_id');
     $admin_id = $request->get('admin_id');
-    $note = $request->get('note');
     $date_approved = date('Y-m-d h:i:s');
 
     if(!$conn->connect_error) {
 
-        $query_update = "UPDATE payment p SET p.status = 2, p.admin_id = $admin_id, p.note = '$note',
+        $query_update = "UPDATE payment p SET p.status = 2, p.admin_id = $admin_id,
 p.date_approved = '$date_approved' WHERE p.payment_id = $payment_id";
 
         $result = $conn->query($query_update) or die(mysqli_error($conn));
@@ -140,7 +138,7 @@ $app->get('/pending', function(Request $request) use($app)
     );
 
     if(!$conn->connect_error) {
-        $query = "SELECT p*. a.name as agent_name, c.name as coverage_name FROM payment p
+        $query = "SELECT p.*, p.commission as commission_request a.name as agent_name, c.name as coverage_name FROM payment p
 JOIN agent a ON a.agent_id = p.agent_id
 JOIN coverage c ON c.coverage_id = a.coverage_id
 WHERE p.status = 0";
@@ -171,10 +169,10 @@ $app->get('/history', function(Request $request) use($app)
     );
 
     if(!$conn->connect_error) {
-        $query = "SELECT p*. a.name as agent_name, c.name as coverage_name FROM payment p
+        $query = "SELECT p.*, p.commission as commission_request, a.name as agent_name, c.name as coverage_name FROM payment p
 JOIN agent a ON a.agent_id = p.agent_id
 JOIN coverage c ON c.coverage_id = a.coverage_id
- WHERE r.status != 0";
+ WHERE r.status = 1";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
