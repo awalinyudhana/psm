@@ -46,6 +46,66 @@ $app->get('/get', function(Request $request) use($app)
     ));
 });
 
+$app->get('/getV2', function(Request $request) use($app)
+{
+    $conn = konekDb();
+    $data = array(
+        'status'  => 'error - db failed',
+        'records' => array(),
+        'total' => 0,
+        'last' => 0
+    );
+
+    if(!$conn->connect_error) {
+        $page = ( !empty( $request->get('page') ) ? $request->get('page') : 1 );
+        $limit = ( !empty( $request->get('limit') ) ? $request->get('limit') : 6 );;
+        $offset = ($page - 1) * $limit;
+        $total = 0;
+
+        $query = "SELECT * FROM reward ORDER BY point ";
+        $querylimit = "LIMIT $offset,$limit";
+
+        $query2 = "SELECT COUNT(*) as total FROM (".$query.") as a";
+
+        $result = $conn->query($query2) or die(mysqli_error($conn));
+
+        if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            $total = $row['total'];
+          }
+        }
+
+        $result = $conn->query($query.$querylimit);
+        if($result->num_rows > 0) {
+            $data['status'] = 'ok';
+            while($row = $result->fetch_assoc()) {
+                $data['records'][] = $row;
+            }
+        } else {
+            $data['status'] = 'error - not found';
+        }
+
+        $data['total'] = $total;
+
+        if($total > 0)
+        {
+          $data['last'] = ceil( $total / $limit );
+        }
+
+        $data['next'] = 1;
+
+        if($data['last'] > 1 && $page < $data['last'])
+        {
+          $data['next'] = $page + 1;
+        }
+    }
+
+    $dataJson = json_encode($data);
+    return new Response($dataJson, 200, array(
+        'Content-Type' => 'application/json'
+    ));
+});
+
 
 $app->post('/insert', function(Request $request) use($app)
 {

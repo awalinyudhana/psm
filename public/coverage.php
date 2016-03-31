@@ -76,6 +76,34 @@ $app->get('/get', function(Request $request) use($app)
     ));
 });
 
+$app->get('/getWhere', function(Request $request) use($app)
+{
+    $conn = konekDb();
+    $data = array(
+        'status'  => 'error - db failed',
+        'data' => array()
+    );
+
+    if(!$conn->connect_error) {
+        $coverage_id = $request->get('coverage_id');
+        $query = "SELECT * FROM coverage WHERE coverage_id='$coverage_id'";
+
+        $result = $conn->query($query);
+        if($result->num_rows > 0) {
+            $data['status'] = 'success';
+            $row = $result->fetch_assoc();
+            $data['data'] = $row['name'];
+        } else {
+            $data['status'] = 'error - not found';
+        }
+    }
+
+    $dataJson = json_encode($data);
+    return new Response($dataJson, 200, array(
+        'Content-Type' => 'application/json'
+    ));
+});
+
 
 $app->post('/insert', function(Request $request) use($app)
 {
