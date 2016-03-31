@@ -159,10 +159,12 @@ $app->get('/history', function(Request $request) use($app)
     );
 
     if(!$conn->connect_error) {
-        $query = "SELECT r*. u.name as users_name, c.name as coverage_name FROM redeem r
+        $query = "SELECT r.*, u.name as users_name, u.point as users_point, w.name as reward_name, w.point as reward_point, c.name as coverage_name
+FROM redeem r
 JOIN users u ON u.users_id = r.users_id
 JOIN coverage c ON c.coverage_id = u.coverage_id
- WHERE r.status != 0";
+JOIN reward w ON w.reward_id = r.reward_id
+WHERE r.status = 0";
 
         $result = $conn->query($query);
         if($result->num_rows > 0) {
